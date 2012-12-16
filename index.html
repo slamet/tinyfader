@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TinyFader 2 - javascript slideshow</title>
+<link rel="stylesheet" href="tinyfader/fader.css">
+<script src="tinyfader/fader.js"></script>
+</head>
+<div id="wrapper">
+	<div>
+		<div class="slider-button" onclick="ss.move(-1)">&laquo;</div>
+		<div id="slideshow">
+			<ul id="slides">
+				<li>
+					<div id="content">
+						<h1>TinyFader 2 - Slideshow w/ CSS3 Transitions</h1>
+						<p>This 2KB JavaScript slider code is completely configurable through the robust option set. It is an upgrade to the previous TinyFader version adding a number of requested features and making additional improvements. It gracefully degrades without JavaScript support and is totally customizable using CSS.</p>
+						<p><em>For complete details visit <a href="http://www.scriptiny.com/tinyfader">scriptiny.com</a>.</em></p>
+					</div>
+				</li>
+				<li>
+					<div id="caption">
+						<img src="photos/sea-turtle.jpg" width="500" height="300" alt="Sea turtle">
+						<div>
+							<h2>Caption Title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu tincidunt leo.</p>
+						</div>
+					</div>
+				</li>
+				<li><img src="photos/coral-reef.jpg" width="500" height="300" alt="Coral Reef"></li>
+				<li><img src="photos/blue-fish.jpg" width="500" height="300" alt="Blue Fish"></li>
+			</ul>
+		</div>
+		<div class="slider-button" onclick="ss.move(1)">&raquo;</div>
+	</div>
+	<ol id="pagination" class="pagination">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
+<script>
+var ss = new TINY.fader.init('ss', {
+	id: 'slides',
+	auto: 4,
+	resume: true,
+	navid: 'pagination',
+	navEvent: 'mouseover',
+	activeClass: 'current',
+	pauseHover: true
+});
+</script>
+</body>
+</html>
